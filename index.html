@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module">
+    const root = document.getElementById('root');
+
+    // root.style.width = "100px";
+    // root.style.height = "100px";
+    // root.style.backgroundColor = "cadetblue";
+
+    console.dir(root.style);
+    
+    let example = `오늘은 9월 1일 입니다.`; 
+
+    const exampleArray = example.split(" ");
+    console.log(exampleArray);
+    console.log(exampleArray.length);
+
+    // 숫자를 찾아서 치환하기
+    // const findNum = exampleArray.find(element => typeof(element) === "number");
+    // console.log(findNum);
+
+    exampleArray.splice(2, 1, "9일");
+    console.log(exampleArray);
+
+    exampleArray.splice(3, 0, "추석연휴")
+    console.log(exampleArray);
+
+    root.innerHTML = exampleArray.join(' ');
+
+    // const dom = [];
+    // function alarm(today, month, day, sentence) {
+    //   dom.push(`${today} `+ 9 +`${month} `+ 1 +`${day} ${sentence}`);
+    //   dom.slice
+    // }
+    // alarm("오늘은","월","일","입니다.");
+    // root.innerHTML = dom.join('');
+
+    // const dom = [];
+    // function tagMaker(count, parentTagName,tagName, textNode, style, props, color, event, alert, message) {
+    //   for(let i = 0; i < count; i++) {
+    //   dom.push(`<${tagName} ${style} = "${props}:${color}"${event}="${alert}('${message}')">${textNode}-${i+1}</${tagName}>`);  
+    //   }
+    //   dom.unshift(`<${parentTagName}>`)
+    //   dom.push(`<${parentTagName}>`)
+    // }
+    // tagMaker(5, "ul", "li", "item","style", "color", "red", "onclick", "alert", "메롱");
+    // root.innerHTML = dom.join('');
+
+    // root.style = "color:red";
+    // root.OnClick = "alert('메롱')";
+
+
+    // const dom = [];
+    // for(let i = 0; i < 5; i++) {
+    //   dom.push(`<div id="test-${i+1}">피카츄</div>`);
+    // }
+
+    // function tagMaker(count, tagName, attri, attriValue, textNode) {
+    //   for(let i = 0; i < count; i++) {
+    //   dom.push(`<${tagName}${attri}="${attriValue}-${i+1}">${textNode}</${tagName}>`);
+    //   }
+    // }
+    // tagMaker(5, "p", "id", "test", "hello");
+
+
+    // dom.push(`<div id="test-1">피카츄</div>`);
+    // dom.push(`<div id="test-2">라이츄</div>`);
+    // dom.push(`<div id="test-3">파이리</div>`);
+    // dom.push(`<div id="test-4">꼬부기</div>`);
+    // dom.push(`<div id="test-5">버터풀</div>`);
+    // console.log(dom.join(''));
+
+    // root.innerHTML = dom.join('');
+
+  </script>
+</body>
+</html>
